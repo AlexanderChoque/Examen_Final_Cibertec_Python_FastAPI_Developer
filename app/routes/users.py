@@ -7,7 +7,6 @@ from app.repositories.repository import BaseRepository
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
-@app.post("/", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED) # type: ignore
 @router.post("/", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return BaseRepository.create_user(db=db, user=user)
