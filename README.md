@@ -14,8 +14,8 @@ source .venv/Scripts/activate  # En Windows (Git Bash / PowerShell)
 uv sync
 
 Configurar las variables de entorno:
-# Duplica el archivo .env.example y nómbralo .env.
-# Rellena las variables requeridas (SECRET_KEY, DATABASE_URL, etc.).
+Duplica el archivo .env.example y nómbralo .env.
+Rellena las variables requeridas (SECRET_KEY, DATABASE_URL, etc.).
 
 Ejecutar el servidor de desarrollo:
 uvicorn app.main:app --reload
